@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YU15 Enrollment: Lorem Ipsum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" title="切換淺／深色模式">
+        <span class="material-symbols-outlined" id="themeIcon">dark_mode</span>
+    </button>
+
+    <section class="hero">
+        <div class="event-host">YU15 41<sup>st</sup> Enrollment</div>
+        <h1 class="event-name" id="eventName"></h1>
+        <div class="countdown" id="countdown">
+            <!-- Dynamically populated by JavaScript -->
+        </div>
+        <div id="event-status"></div>
+    </section>
+
+    <section id="info">
+        <div class="container">
+            <h2 class="section-title">活動資訊</h2>
+            
+            <div class="info-grid">
+                <div class="section-block">
+                    <h3 class="section-subtitle">活動簡介</h3>
+                    <div class="intro-text">
+                        <p>Welcome to the most anticipated event of the year! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>Join us for an unforgettable experience filled with excitement, learning, and networking opportunities. We look forward to seeing you there!</p>
+                    </div>
+                </div>
+                
+                <div class="section-block">
+                    <h3 class="section-subtitle">活動詳情</h3>
+                    <div class="event-details">
+                        <div class="detail-item">
+                            <div class="detail-label">
+                                <span class="material-symbols-outlined">calendar_month</span>日期：
+                            </div>
+                            <div class="detail-value">24/8/2025（日）</div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-label">
+                                <span class="material-symbols-outlined">schedule</span>時間：
+                            </div>
+                            <div class="detail-value">14:00 – 17:00</div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-label">
+                                <span class="material-symbols-outlined">location_on</span>地點：
+                            </div>
+                            <div class="detail-value">
+                                <a href="https://www.google.com/maps/place/%E5%96%87%E6%B2%99%E6%9B%B8%E9%99%A2/@22.3286916,114.1801573,17z/data=!3m1!4b1!4m6!3m5!1s0x3404072cd554d98d:0xf2c080fd961b727d!8m2!3d22.3286916!4d114.1827322!16zL20vMDUzZmdz?entry=ttu&g_ep=EgoyMDI1MDYyNi4wIKXMDSoASAFQAw%3D%3D">九龍城　喇沙利道 18 號　喇沙書院禮堂</a>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-label">
+                                <span class="material-symbols-outlined">transportation</span>交通：
+                            </div>
+                            <div class="detail-value">
+                                <ul class="transportation-list">
+                                    <li>巴士：1、1A、6D、10、12A、208、42⋯⋯</li>
+                                    <li>MTR：九龍塘站轉乘專線小巴 25A／25B／25M 於喇沙書院／碧華花園小巴站落</li>
+                                    <li>小巴：69A、70A⋯⋯</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="share-btn" id="shareBtn" title="分享活動資訊">
+                <span class="material-symbols-outlined">ios_share</span>
+                分享活動資訊
+            </button>
+        </div>
+    </section>
+
+    <section id="souvenirs">
+        <div class="container">
+            <h2 class="section-title">精美 Souvenirs</h2>
+            
+            <div class="souvenirs">
+                <div class="souvenir-box" title="精美 souvenir 等你過嚟拎！">?</div>
+                <div class="souvenir-box" title="精美 souvenir 等你過嚟拎！">?</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="form">
+        <div class="container">
+            <h2 class="section-title">馬上報名</h2>
+            <p>（完整 Google Form URL <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDk5PXH_skpxJjYGcF2OA2Bkigh8-C0Vuvy_3H7i48Ek0sPw/viewform?usp=dialog" target="_blank">按此</a>）</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeDk5PXH_skpxJjYGcF2OA2Bkigh8-C0Vuvy_3H7i48Ek0sPw/viewform?embedded=true" style="width: 100%; height: 750px;" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">聯絡我們</h2>
+            
+            <div class="contact-info">
+                <p>如有任何疑問，請聯絡：</p>
+                <p class="contact-name">勞灝洋 <span style="color: var(--text-secondary); font-weight: 400; font-size: 1.2rem;">S.S.L.(P)</span></p>
+                <p><span class="material-symbols-outlined">call</span><a href="tel:+85254043262">5404 3262</a></p>
+                <p><span class="material-symbols-outlined">mail</span><a href="mailto:haoyanglao@gmail.com">haoyanglao@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" title="關閉">&times;</button>
+            <h3 class="modal-title">分享活動資訊</h3>
+            <div class="modal-select-info">
+                <div class="modal-text" title="分享宣傳文字" aria-current="true" data-target="text">
+                    <span class="material-symbols-outlined">description</span>
+                </div>
+                <div class="modal-poster" title="分享宣傳海報" data-target="poster">
+                    <span class="material-symbols-outlined">planner_banner_ad_pt</span>
+                </div>
+            </div>
+            <textarea class="share-textarea" id="shareText" readonly>
+𝕐𝕌𝟙𝟝 𝟜𝟙ˢᵗ 𝔼𝕟𝕣𝕠𝕝𝕝𝕞𝕖𝕟𝕥:
+Date: 24/8/2025 (Sunday)
+Time: 14:00 – 17:00
+Venue: ABC School Hall
+
+Transportation:
+- Bus routes 101, 205, and 307 stop nearby
+- Nearest MRT station: Central Station (Exit B)
+- Parking available at the venue for $5 per hour
+- Bicycle racks available at the east entrance
+
+Come and join us for an unforgettable experience! For any inquiries, contact Mr. Smith at 1234 5678.
+
+Event URL: https://YU15events.com/lorem-ipsum</textarea>
+            <button class="copy-btn active" id="copyBtn" title="複製到剪貼簿">
+                <span class="material-symbols-outlined">content_copy</span>
+                複製到剪貼簿
+            </button>
+            <img src="/exampleposter.jpg" class="share-poster" id="sharePoster">
+            
+            <div class="copied-message" id="copiedMessage">已複製！</div>
+        </div>
+    </div>
+</body>
+</html>
