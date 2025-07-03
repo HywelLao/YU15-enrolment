@@ -81,7 +81,7 @@ a:hover {
 /* Hero Section */
 .hero {
     height: max(400px, 70dvh);
-    background-image: url("/hero-bg.jpg");
+    background-image: url("img/hero-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
