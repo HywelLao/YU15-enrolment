@@ -171,7 +171,6 @@ a:hover {
     margin-top: 0.5rem;
 }
 
-/* Sections */
 section {
     padding: 5rem 0;
     scroll-margin-top: 2rem;
@@ -284,7 +283,6 @@ section:nth-child(even) {
     color: var(--accent);
 }
 
-/* Share Button */
 .share-btn {
     background: var(--accent);
     color: white;

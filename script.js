@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         type();
     }
-    typeWriter('Lorem ipsum', 90, 'eventName');
+    typeWriter('Iter Simul', 90, 'eventName');
 
     const sections = document.querySelectorAll('section:not(.hero)');
 
