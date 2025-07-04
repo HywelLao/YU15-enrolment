@@ -543,6 +543,11 @@ section:nth-child(even) {
         min-height: 350px;
     }
 
+    .event-logo {
+        width: calc(128rem / 15);
+        height: calc(128rem / 15);
+    }
+
     .event-name {
         font-size: 3.2rem;
         margin-bottom: 1.5rem;
@@ -620,6 +625,11 @@ section:nth-child(even) {
         height: 50dvh;
         min-height: 300px;
         padding: 0 1rem;
+    }
+
+    .event-logo {
+        width: calc(44rem / 15);
+        height: calc(44rem / 15);
     }
 
     .event-host {
