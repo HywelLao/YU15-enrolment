@@ -78,7 +78,7 @@ a:hover {
 }
 
 .hero {
-    height: max(400px, 70dvh);
+    height: 70dvh;
     background-image: url("src/hero-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -539,7 +539,7 @@ section:nth-child(even) {
     }
     
     .hero {
-        height: 60dvh;
+        height: 75dvh;
         min-height: 350px;
     }
 
@@ -622,14 +622,9 @@ section:nth-child(even) {
     }
 
     .hero {
-        height: 50dvh;
+        height: 95dvh;
         min-height: 300px;
         padding: 0 1rem;
-    }
-
-    .event-logo {
-        width: calc(44rem / 15);
-        height: calc(44rem / 15);
     }
 
     .event-host {
