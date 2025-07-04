@@ -93,7 +93,6 @@ a:hover {
     overflow: hidden;
     text-align: center;
     padding: 1rem;
-    margin-top: 0;
 }
 
 .event-logo {
@@ -112,9 +111,9 @@ a:hover {
 
 .event-name {
     font-family: var(--font-serif);
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     position: relative;
     text-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
