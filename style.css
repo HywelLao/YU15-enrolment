@@ -123,7 +123,7 @@ a:hover {
     position: absolute;
     width: 2.5px;
     height: 4.8rem;
-    background-color: var(--text-secondary);
+    background-color: #2ddfa3;
     top: 50%;
     transform: translateY(-50%);
     animation: typing 1s ease-in-out infinite;
