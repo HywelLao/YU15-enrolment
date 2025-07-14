@@ -226,6 +226,7 @@ section:nth-child(even) {
 
 .intro-text p {
     margin-bottom: 1.5rem;
+    text-align: justify;
 }
 
 .event-details {
