@@ -177,6 +177,35 @@ copyBtn.addEventListener('click', () => {
 
 // Add subtle scroll animations
 document.addEventListener('DOMContentLoaded', function () {
+    const images = ['src/blurred1.webp', 'src/blurred2.webp'];
+    const canvases = document.querySelectorAll('.souvenir-canvas');
+
+    canvases.forEach((canvas, i) => {
+        const ctx = canvas.getContext('2d');
+        const img = new Image();
+        img.crossOrigin = 'anonymous';
+        img.src = images[i];
+
+        img.onload = () => {
+            const width = canvas.width;
+            const height = canvas.height;
+
+            // Use CSS variable for dynamic theming (light/dark bg)
+            const bgColor = getComputedStyle(document.documentElement)
+            .getPropertyValue('--souvenir-bg-fallback')
+            .trim() || '#fff';
+
+            // 1. Paint background behind transparent image
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, width, height);
+
+            // 2. Apply visual effects and draw image
+            ctx.filter = 'blur(5px) brightness(0.9) saturate(0.7)';
+            ctx.drawImage(img, 0, 0, width, height);
+        };
+    }); 
+
+
     function typeWriter(txt, speed, elementId) {
         let i = 0;
         const element = document.getElementById(elementId);

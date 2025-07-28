@@ -12,14 +12,18 @@
     --card-bg: #fafafa;
     --card-shadow: 0 4px 6px rgba(0,0,0,0.05);
     /* --hero-gradient: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea); */
-    --souvenir-bg: #1a1a1a;
+
     --transparent-1: rgba(0, 0, 0, 0.3);
     --transparent-2: rgba(0, 0, 0, 0.5);
     
     --font-sans: 'Poppins', sans-serif;
     --font-serif: 'Crimson Text', 'Noto Serif TC', serif;
     --font-mono: 'Ubuntu Sans Mono', monospace;
+
+    --souvenir-bg: rgba(255, 255, 255, 0.9); /* default background for souvenir boxes */
+    --souvenir-bg-fallback: #ffffff;         /* fallback color behind transparent img */
 }
+
 
 .dark-mode {
     /* Dark theme colors */
@@ -33,9 +37,13 @@
     --card-bg: #1e1e1e;
     --card-shadow: 0 4px 6px rgba(0,0,0,0.2);
     /* --hero-gradient: linear-gradient(135deg, #3730a3, #5b21b6, #7e22ce); */
+
     --souvenir-bg: #0a0a0a;
     --transparent-1: rgba(255, 255, 255, 0.3);
     --transparent-2: rgba(255, 255, 255, 0.5);
+
+    --souvenir-bg: rgba(20, 20, 20, 0.9);
+    --souvenir-bg-fallback: #141414;
 }
 
 * {
@@ -463,29 +471,43 @@ section:nth-child(even) {
 }
 
 .souvenir-box {
-    width: 280px;
-    height: 280px;
-    background: var(--souvenir-bg);
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8rem;
-    color: rgba(255,255,255,0.1);
-    cursor: pointer;
-    transition: all 300ms ease;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    transition: transform 300ms;
+    cursor: pointer;
 }
 
 .souvenir-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.souvenir-canvas {
+    width: 100%;
+    height: 100%;
+    filter: blur(6px) brightness(0.8) saturate(0.6);
+    pointer-events: none;
+    user-select: none;
+    border-radius: 12px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.3em 0.6em;
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+    text-shadow: 0 0 6px black;
+    pointer-events: none;
 }
 
 .contact-info > p {
-    font-size: 1.6rem;
     margin-bottom: 1rem;
 }
 
