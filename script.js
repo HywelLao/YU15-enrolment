@@ -177,7 +177,7 @@ copyBtn.addEventListener('click', () => {
 
 // Add subtle scroll animations
 document.addEventListener('DOMContentLoaded', function () {
-    const images = ['src/blurred1.webp', 'src/blurred2.webp'];
+    const images = ['src/souvenir1.webp', 'src/souvenir2.webp'];
     const canvases = document.querySelectorAll('.souvenir-canvas');
 
     canvases.forEach((canvas, i) => {
