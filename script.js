@@ -29,33 +29,39 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
-// Countdown timer
 function updateCountdown() {
     const now = new Date();
     const diff = eventDate - now;
     const countdownElement = document.getElementById('countdown');
     const eventStatus = document.getElementById('event-status');
 
-    // Clear existing content
     countdownElement.innerHTML = '';
 
-    if (diff <= 0) {
-        // Event has ended
+    // Event ended (3+ hours after start)
+    if (diff <= -3 * 60 * 60 * 1000) {
         eventStatus.textContent = "The event has concluded. Thank you for joining us!";
         eventStatus.style.fontSize = "1.5rem";
         eventStatus.style.fontWeight = "600";
         return;
     }
 
-    // Calculate time components
+    // Event is happening now
+    if (diff <= 0) {
+        eventStatus.textContent = "The event is currently in progress!";
+        eventStatus.style.fontSize = "1.5rem";
+        eventStatus.style.fontWeight = "600";
+        countdownElement.innerHTML = '';
+        setTimeout(updateCountdown, 1000 * 60);
+        return;
+    }
+
+    // Countdown to event
     const totalDays = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const totalHours = Math.floor(diff / (1000 * 60 * 60));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    // Determine what to display
     if (totalDays >= 1) {
-        // More than 24 hours - show days
         eventStatus.textContent = "";
 
         const daysUnit = document.createElement('div');
@@ -66,11 +72,29 @@ function updateCountdown() {
         `;
         countdownElement.appendChild(daysUnit);
 
-        // Update daily
         setTimeout(updateCountdown, 1000 * 60 * 60);
-    } else if (totalHours >= 1) {
-        // Less than 24 hours - show hours and minutes
-        eventStatus.textContent = "The event is starting soon!";
+    } else if (diff > 1000 * 60 * 60) {
+        eventStatus.textContent = "";
+
+        const hoursUnit = document.createElement('div');
+        hoursUnit.className = 'countdown-unit';
+        hoursUnit.innerHTML = `
+            <span class="countdown-number">${hours.toString().padStart(2, '0')}</span>
+            <span class="countdown-label">Hours</span>
+        `;
+        countdownElement.appendChild(hoursUnit);
+
+        const minutesUnit = document.createElement('div');
+        minutesUnit.className = 'countdown-unit';
+        minutesUnit.innerHTML = `
+            <span class="countdown-number">${minutes.toString().padStart(2, '0')}</span>
+            <span class="countdown-label">Minutes</span>
+        `;
+        countdownElement.appendChild(minutesUnit);
+
+        setTimeout(updateCountdown, 1000 * 60);
+    } else {
+        eventStatus.textContent = "宣誓典禮即將開始！The enrolment is starting soon!";
         eventStatus.style.fontSize = "1.5rem";
         eventStatus.style.fontWeight = "600";
 
@@ -90,17 +114,19 @@ function updateCountdown() {
         `;
         countdownElement.appendChild(minutesUnit);
 
-        // Update every minute
-        setTimeout(updateCountdown, 1000 * 60);
-    } else {
-        // Event is happening now
-        eventStatus.textContent = "The event is happening now!";
-        eventStatus.style.fontSize = "1.5rem";
-        eventStatus.style.fontWeight = "600";
+        const secondsUnit = document.createElement('div');
+        secondsUnit.className = 'countdown-unit';
+        secondsUnit.innerHTML = `
+            <span class="countdown-number">${seconds.toString().padStart(2, '0')}</span>
+            <span class="countdown-label">Seconds</span>
+        `;
+        countdownElement.appendChild(secondsUnit);
+
+        setTimeout(updateCountdown, 1000);
     }
 }
 
-// Initialize countdown
+// Start countdown
 updateCountdown();
 
 // Share modal functionality
