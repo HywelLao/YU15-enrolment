@@ -9,8 +9,9 @@
     --text-accent: #2d3748;
     --accent: #4f46e5;
     --accent-hover: #4338ca;
+    --selection: rgba(79, 70, 229, 0.2);
     --card-bg: #fafafa;
-    --card-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     /* --hero-gradient: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea); */
 
     --transparent-1: rgba(0, 0, 0, 0.3);
@@ -34,8 +35,9 @@
     --text-accent: #e2e8f0;
     --accent: #818cf8;
     --accent-hover: #6366f1;
+    --selection: rgba(129, 140, 248, 0.4);
     --card-bg: #1e1e1e;
-    --card-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     /* --hero-gradient: linear-gradient(135deg, #3730a3, #5b21b6, #7e22ce); */
 
     --souvenir-bg: #0a0a0a;
@@ -51,6 +53,10 @@
     padding: 0;
     box-sizing: border-box;
     transition: background-color 300ms, color 300ms, opacity 300ms;
+}
+
+*::selection {
+    background-color: var(--selection);
 }
 
 html {
