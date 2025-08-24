@@ -98,14 +98,6 @@ function updateCountdown() {
         eventStatus.style.fontSize = "1.5rem";
         eventStatus.style.fontWeight = "600";
 
-        const hoursUnit = document.createElement('div');
-        hoursUnit.className = 'countdown-unit';
-        hoursUnit.innerHTML = `
-            <span class="countdown-number">${hours.toString().padStart(2, '0')}</span>
-            <span class="countdown-label">Hours</span>
-        `;
-        countdownElement.appendChild(hoursUnit);
-
         const minutesUnit = document.createElement('div');
         minutesUnit.className = 'countdown-unit';
         minutesUnit.innerHTML = `
