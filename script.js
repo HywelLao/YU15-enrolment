@@ -39,7 +39,7 @@ function updateCountdown() {
 
     // Event ended (3+ hours after start)
     if (diff <= -3 * 60 * 60 * 1000) {
-        eventStatus.textContent = "The event has concluded. Thank you for joining us!";
+        eventStatus.textContent = "宣誓典禮已圓滿結束，感謝您的參與！The enrolment has concluded. Thank you for joining us!";
         eventStatus.style.fontSize = "1.5rem";
         eventStatus.style.fontWeight = "600";
         return;
@@ -47,7 +47,7 @@ function updateCountdown() {
 
     // Event is happening now
     if (diff <= 0) {
-        eventStatus.textContent = "The event is currently in progress!";
+        eventStatus.textContent = "宣誓典禮現正進行中！The enrolment is currently in progress!";
         eventStatus.style.fontSize = "1.5rem";
         eventStatus.style.fontWeight = "600";
         countdownElement.innerHTML = '';
