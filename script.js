@@ -217,8 +217,6 @@ document.addEventListener('DOMContentLoaded', function () {
             ctx.fillStyle = bgColor;
             ctx.fillRect(0, 0, width, height);
 
-            // 2. Apply visual effects and draw image
-            ctx.filter = 'blur(5px) brightness(0.9) saturate(0.7)';
             ctx.drawImage(img, 0, 0, width, height);
         };
     }); 
